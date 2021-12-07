@@ -1,3 +1,5 @@
+source('code/folding definitions.R')
+
 add <- function(x1, x2) {
   return(x1 + x2)
 }
@@ -29,10 +31,59 @@ recursive_any(rep(TRUE, 3)) == any(rep(TRUE, 3))
 recursive_any(rep(FALSE, 3)) == any(rep(FALSE, 3))
 recursive_any(c(TRUE, FALSE, TRUE)) == any(c(TRUE, FALSE, TRUE))
 
-union_all <- foldr(union, vector())
-all(union_all(c(1, 2, 3)) == c(1, 2, 3))
-all(union_all(vector()) == vector())
+max_scaler <- function(x1, x2) {
+  if (x1 >= x2)
+    out <- x1
+  else
+    out <- x2
+  
+  return(out)
+}
 
-intersect_all <- foldl(intersect, vector())
-all(intersect_all(c(1, 2, 3)) == vector())
-all(intersect_all(vector()) == vector())
+recursive_max <- foldr(max_scaler, -Inf)
+recursive_max(c()) == -Inf
+recursive_max(c(1, 2, 3)) == 3
+recursive_max(c(-1, -2, -3)) == -1
+recursive_max(0) == 0
+recursive_max(c(1, 1, 1)) == 1
+
+min_scaler <- function(x1, x2) {
+  if (x1 <= x2)
+    out <- x1
+  else
+    out <- x2
+  
+  return(out)
+}
+
+recursive_min <- foldl(min_scaler, Inf)
+recursive_min(c()) == Inf
+recursive_min(c(1, 2, 3)) == 1
+recursive_min(c(-1, -2, -3)) == -3
+recursive_min(0) == 0
+recursive_min(c(1, 1, 1)) == 1
+
+union_scaler <- function(x1, x2) {
+  return(c(x1, x2))
+}
+recursive_union <- foldr(union_scaler, vector())
+all(recursive_union(c(1, 2, 3)) == c(1, 2, 3))
+all(recursive_union(vector()) == vector())
+
+intersect_scaler <- function(x1, x2) {
+  if (length(x1) == 0)
+    out <- vector()
+  else if (length(x2) == 0)
+    out <- x1
+  else if (x1 != x2)
+    out <- vector()
+  else
+    out <- x1
+  
+  return(out)
+}
+recursive_intersect <- foldl(intersect_scaler, vector())
+all(recursive_intersect(c(1, 2, 3)) == vector())
+all(recursive_intersect(c(1, 1, 1)) == 1)
+all(recursive_intersect(vector()) == vector())
+
