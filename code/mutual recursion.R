@@ -1,3 +1,5 @@
+source('code/higher order functions.R')
+
 is.even <- function(x) {
   if (length(x) != 1)
     stop()
@@ -27,8 +29,8 @@ is.odd <- function(x) {
 evenInts <- seq(2L, 200L, 2L)
 oddInts <- evenInts - 1L
 
-all(purrr::map_lgl(evenInts, is.even)) == TRUE
-any(purrr::map_lgl(evenInts, is.odd))  == FALSE
+all(map(evenInts, is.even)) == TRUE
+any(map(evenInts, is.odd))  == FALSE
 
-all(purrr::map_lgl(oddInts, is.odd)) == TRUE
-any(purrr::map_lgl(oddInts, is.even)) == FALSE
+all(map(oddInts, is.odd)) == TRUE
+any(map(oddInts, is.even)) == FALSE
