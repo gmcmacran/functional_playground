@@ -1,5 +1,17 @@
-source('R/higher order functions.R')
-
+#' Standard functions implemented in a functional style
+#'
+#' @param x A numeric vector.
+#' @details
+#'
+#' Functions leverage mutual recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' x <- 1:10
+#' is.even(x)
+#' is.odd(x)
+#' @export
 is.even <- function(x) {
   if (length(x) != 1)
     stop()
@@ -13,6 +25,8 @@ is.even <- function(x) {
     return(is.odd(x-1L))
 }
 
+#' @rdname is.even
+#' @export
 is.odd <- function(x) {
   if (length(x) != 1)
     stop()
@@ -25,12 +39,3 @@ is.odd <- function(x) {
   else
     return(is.even(x-1L))
 }
-
-evenInts <- seq(2L, 200L, 2L)
-oddInts <- evenInts - 1L
-
-all(map(evenInts, is.even)) == TRUE
-any(map(evenInts, is.odd))  == FALSE
-
-all(map(oddInts, is.odd)) == TRUE
-any(map(oddInts, is.even)) == FALSE
