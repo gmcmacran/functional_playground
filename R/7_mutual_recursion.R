@@ -11,7 +11,7 @@ is_even_base <- function(x) {
   if (x == 0) {
     return(TRUE)
   } else {
-    return(is.odd(x - 1L))
+    return(is_odd_base(x - 1L))
   }
 }
 
@@ -28,7 +28,7 @@ is_odd_base <- function(x) {
   if (x == 0) {
     return(FALSE)
   } else {
-    return(is.even(x - 1L))
+    return(is_even_base(x - 1L))
   }
 }
 
@@ -43,15 +43,15 @@ is_odd_base <- function(x) {
 #' library(functionalPlayground)
 #'
 #' x <- 1:10
-#' is.even(x)
-#' is.odd(x)
+#' is_even(x)
+#' is_odd(x)
 #' @export
-is.even <- function(x) {
+is_even <- function(x) {
   return(map(x, is_even_base))
 }
 
-#' @rdname is.even
+#' @rdname is_even
 #' @export
-is.odd <- function(x) {
+is_odd <- function(x) {
   return(map(x, is_odd_base))
 }
