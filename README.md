@@ -1,9 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# functionalPlayground
+# Overview
 
 <!-- badges: start -->
+
+[![Codecov test
+coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/master/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=master)
 <!-- badges: end -->
 
 This package implements standard algorithms using a functional
@@ -31,7 +34,7 @@ programming approach.
 
 ## Installation
 
-This package is not on cran. A stable version can be in stalled with:
+This package is not on cran. A stable version can be installed with:
 
 ``` r
 # install.packages("devtools")
