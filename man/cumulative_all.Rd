@@ -3,7 +3,7 @@
 \name{cumulative_all}
 \alias{cumulative_all}
 \alias{cumulative_any}
-\title{Standard functions implemented in a functional style}
+\title{Cumulative functions implemented in a functional style}
 \usage{
 cumulative_all(x)
 
@@ -13,10 +13,10 @@ cumulative_any(x)
 \item{x}{A logical vector.}
 }
 \description{
-Standard functions implemented in a functional style
+Cumulative functions implemented in a functional style
 }
 \details{
-Functions leverage map and a function operator.
+Functions leveraging map and a function operator.
 }
 \examples{
 library(functionalPlayground)

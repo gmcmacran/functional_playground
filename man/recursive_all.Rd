@@ -3,7 +3,7 @@
 \name{recursive_all}
 \alias{recursive_all}
 \alias{recursive_any}
-\title{Standard functions implemented in a functional style}
+\title{Standard logical functions implemented by folding}
 \usage{
 recursive_all(x)
 
@@ -13,10 +13,10 @@ recursive_any(x)
 \item{x}{A logical vector.}
 }
 \description{
-Standard functions implemented in a functional style
+Standard logical functions implemented by folding
 }
 \details{
-Functions leverage either fold right or fold left.
+Functions leveraging either fold right or fold left.
 }
 \examples{
 library(functionalPlayground)

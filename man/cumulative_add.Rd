@@ -5,7 +5,7 @@
 \alias{cumulative_multiply}
 \alias{cumulative_max}
 \alias{cumulative_min}
-\title{Standard functions implemented in a functional style}
+\title{Cumulative functions implemented in a functional style}
 \usage{
 cumulative_add(x)
 
@@ -19,10 +19,10 @@ cumulative_min(x)
 \item{x}{A numeric vector.}
 }
 \description{
-Standard functions implemented in a functional style
+Cumulative functions implemented in a functional style
 }
 \details{
-Functions leverage map and a function operator.
+Functions leveraging map and a function operator.
 }
 \examples{
 library(functionalPlayground)

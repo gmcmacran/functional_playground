@@ -1,9 +1,9 @@
-#' Standard functions implemented in a functional style
+#' Cumulative functions implemented in a functional style
 #'
 #' @param x A numeric vector.
 #' @details
 #'
-#' Functions leverage map and a function operator.
+#' Functions leveraging map and a function operator.
 #'
 #' @examples
 #' library(functionalPlayground)

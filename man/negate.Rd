@@ -2,7 +2,7 @@
 % Please edit documentation in R/8 negate.R
 \name{negate}
 \alias{negate}
-\title{Standard functions implemented in a functional style}
+\title{Standard function operator}
 \usage{
 negate(f)
 }
@@ -10,16 +10,16 @@ negate(f)
 \item{f}{A function to be negated.}
 }
 \description{
-Standard functions implemented in a functional style
+Standard function operator
 }
 \details{
-Negate any function
+Negate any function.
 }
 \examples{
 library(functionalPlayground)
 
 always_true <- function(...) {
-return(TRUE)
+  return(TRUE)
 }
 always_false <- negate(always_true)
 always_false(TRUE)

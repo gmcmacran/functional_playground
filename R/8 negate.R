@@ -1,15 +1,15 @@
-#' Standard functions implemented in a functional style
+#' Standard function operator
 #'
 #' @param f A function to be negated.
 #' @details
 #'
-#' Negate any function
+#' Negate any function.
 #'
 #' @examples
 #' library(functionalPlayground)
 #'
 #' always_true <- function(...) {
-#' return(TRUE)
+#'   return(TRUE)
 #' }
 #' always_false <- negate(always_true)
 #' always_false(TRUE)

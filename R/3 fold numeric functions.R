@@ -1,9 +1,9 @@
-#' Standard functions implemented in a functional style
+#' Standard numeric functions implemented by folding
 #'
 #' @param x A numeric vector.
 #' @details
 #'
-#' Functions leverage either fold right or fold left.
+#' Functions leveraging either fold right or fold left.
 #'
 #' @examples
 #' library(functionalPlayground)

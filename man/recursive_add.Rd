@@ -5,7 +5,7 @@
 \alias{recursive_multiply}
 \alias{recursive_max}
 \alias{recursive_min}
-\title{Standard functions implemented in a functional style}
+\title{Standard numeric functions implemented by folding}
 \usage{
 recursive_add(x)
 
@@ -19,10 +19,10 @@ recursive_min(x)
 \item{x}{A numeric vector.}
 }
 \description{
-Standard functions implemented in a functional style
+Standard numeric functions implemented by folding
 }
 \details{
-Functions leverage either fold right or fold left.
+Functions leveraging either fold right or fold left.
 }
 \examples{
 library(functionalPlayground)

@@ -3,7 +3,7 @@
 \name{is.even}
 \alias{is.even}
 \alias{is.odd}
-\title{Standard functions implemented in a functional style}
+\title{Mutual recursion}
 \usage{
 is.even(x)
 
@@ -13,10 +13,10 @@ is.odd(x)
 \item{x}{A numeric vector.}
 }
 \description{
-Standard functions implemented in a functional style
+Mutual recursion
 }
 \details{
-Functions leverage mutual recursion.
+Functions leveraging mutual recursion.
 }
 \examples{
 library(functionalPlayground)
