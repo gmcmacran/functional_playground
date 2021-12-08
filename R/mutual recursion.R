@@ -1,12 +1,12 @@
-source('code/higher order functions.R')
+source('R/higher order functions.R')
 
 is.even <- function(x) {
   if (length(x) != 1)
     stop()
-  
+
   if (!is.integer(x))
     stop()
-  
+
   if (x == 0)
     return(TRUE)
   else
@@ -16,10 +16,10 @@ is.even <- function(x) {
 is.odd <- function(x) {
   if (length(x) != 1)
     stop()
-  
+
   if (!is.integer(x))
     stop()
-  
+
   if (x == 0)
     return(FALSE)
   else

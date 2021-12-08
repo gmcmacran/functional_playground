@@ -1,4 +1,4 @@
-source('code/higher order functions.R')
+source('R/higher order functions.R')
 
 add <- function(x1, x2) {
   return(x1 + x2)
@@ -17,7 +17,7 @@ max_scaler <- function(x1, x2) {
     out <- x1
   else
     out <- x2
-  
+
   return(out)
 }
 
@@ -28,7 +28,7 @@ min_scaler <- function(x1, x2) {
     out <- x1
   else
     out <- x2
-  
+
   return(out)
 }
 
@@ -59,7 +59,7 @@ intersect_scaler <- function(x1, x2) {
     out <- vector()
   else
     out <- x1
-  
+
   return(out)
 }
 recursive_intersect <- foldl(intersect_scaler, vector())
