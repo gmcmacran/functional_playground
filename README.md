@@ -7,6 +7,8 @@
 
 [![Codecov test
 coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/master/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=master)
+[![R build
+status](https://github.com/gmcmacran/functional_playground/workflows/R-CMD-check/badge.svg)](https://github.com/gmcmacran/functional_playground/actions)
 <!-- badges: end -->
 
 This package implements standard algorithms using a functional
