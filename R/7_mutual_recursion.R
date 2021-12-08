@@ -1,29 +1,35 @@
 #' @keywords internal
 is_even_base <- function(x) {
-  if (length(x) != 1)
+  if (length(x) != 1) {
     stop()
+  }
 
-  if (!is.integer(x))
+  if (!is.integer(x)) {
     stop()
+  }
 
-  if (x == 0)
+  if (x == 0) {
     return(TRUE)
-  else
-    return(is.odd(x-1L))
+  } else {
+    return(is.odd(x - 1L))
+  }
 }
 
 #' @keywords internal
 is_odd_base <- function(x) {
-  if (length(x) != 1)
+  if (length(x) != 1) {
     stop()
+  }
 
-  if (!is.integer(x))
+  if (!is.integer(x)) {
     stop()
+  }
 
-  if (x == 0)
+  if (x == 0) {
     return(FALSE)
-  else
-    return(is.even(x-1L))
+  } else {
+    return(is.even(x - 1L))
+  }
 }
 
 #' Mutual recursion
@@ -49,4 +55,3 @@ is.even <- function(x) {
 is.odd <- function(x) {
   return(map(x, is_odd_base))
 }
-

@@ -25,4 +25,3 @@ test_that("Test any over vectors.", {
   expect_true(recursive_any(rep(FALSE, 10)) == any(rep(FALSE, 10)))
   expect_true(recursive_any(rand) == any(rand))
 })
-

@@ -25,4 +25,3 @@ test_that("Test any over vectors.", {
   expect_true(all(cumulative_any(rep(FALSE, 10)) == lest::cumany(rep(FALSE, 10))))
   expect_true(all(cumulative_any(rand) == lest::cumany(rand)))
 })
-

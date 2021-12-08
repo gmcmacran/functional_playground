@@ -27,4 +27,3 @@ recursive_max <- foldr(max_scaler, -Inf)
 #' @rdname recursive_add
 #' @export
 recursive_min <- foldl(min_scaler, Inf)
-

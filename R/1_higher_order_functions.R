@@ -8,7 +8,7 @@ foldr <- function(f, id) {
   force(f)
   force(id)
 
-  out <- function(x){
+  out <- function(x) {
     if (length(x) == 0) {
       return(id)
     } else {
@@ -23,7 +23,7 @@ foldl <- function(f, id) {
   force(f)
   force(id)
 
-  out <- function(x){
+  out <- function(x) {
     if (length(x) == 0) {
       return(id)
     } else {
@@ -35,10 +35,11 @@ foldl <- function(f, id) {
 
 #' @keywords internal
 map <- function(x, f) {
-  if (length(x) == 0)
+  if (length(x) == 0) {
     return(c())
-  else
+  } else {
     return(c(f(x[1]), map(x[-1], f)))
+  }
   return(out)
 }
 
@@ -47,9 +48,9 @@ cumulative_f <- function(f) {
   force(f)
   out <- function(x) {
     inner_out <- vector(length = length(x))
-    if (length(x) == 0)
+    if (length(x) == 0) {
       inner_out <- f(x)
-    else {
+    } else {
       helper <- function(endpoint) {
         return(f(x[1:endpoint]))
       }

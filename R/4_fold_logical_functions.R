@@ -17,4 +17,3 @@ recursive_all <- foldr(and, TRUE)
 #' @rdname recursive_all
 #' @export
 recursive_any <- foldl(or, FALSE)
-

@@ -13,20 +13,22 @@ multiply <- function(x1, x2) {
 
 #' @keywords internal
 max_scaler <- function(x1, x2) {
-  if (x1 >= x2)
+  if (x1 >= x2) {
     out <- x1
-  else
+  } else {
     out <- x2
+  }
 
   return(out)
 }
 
 #' @keywords internal
 min_scaler <- function(x1, x2) {
-  if (x1 <= x2)
+  if (x1 <= x2) {
     out <- x1
-  else
+  } else {
     out <- x2
+  }
 
   return(out)
 }

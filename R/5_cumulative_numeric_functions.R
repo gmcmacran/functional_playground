@@ -27,4 +27,3 @@ cumulative_max <- cumulative_f(recursive_max)
 #' @rdname cumulative_add
 #' @export
 cumulative_min <- cumulative_f(recursive_min)
-
