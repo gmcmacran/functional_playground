@@ -40,7 +40,6 @@ map <- function(x, f) {
   } else {
     return(c(f(x[1]), map(x[-1], f)))
   }
-  return(out)
 }
 
 #' @keywords internal

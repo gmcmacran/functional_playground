@@ -13,7 +13,7 @@
 #' }
 #' always_false <- negate(always_true)
 #' always_false(TRUE)
-#' always - false(FALSE)
+#' always_false(FALSE)
 #' @export
 negate <- function(f) {
   return(function(...) !f(...))
