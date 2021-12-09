@@ -43,7 +43,7 @@ This package implements standard algorithms using a functional programming appro
   + is_even
   + is_odd
 * Recursion
-  + reverse
+  + recursive_reverse
 
 
 ## Installation

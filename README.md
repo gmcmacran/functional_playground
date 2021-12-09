@@ -35,7 +35,7 @@ programming approach.
     -   is_even
     -   is_odd
 -   Recursion
-    -   reverse
+    -   recursive_reverse
 
 ## Installation
 
