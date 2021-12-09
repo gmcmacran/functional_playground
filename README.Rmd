@@ -31,6 +31,7 @@ This package implements standard algorithms using a functional programming appro
   + recursive_any
 * Function operator
   + negate
+  + filter
 * Map and function operator
   + cumulative_add
   + cumulative_multiply
@@ -41,6 +42,8 @@ This package implements standard algorithms using a functional programming appro
 * Mutual recursion
   + is_even
   + is_odd
+* Recursion
+  + reverse
 
 
 ## Installation
