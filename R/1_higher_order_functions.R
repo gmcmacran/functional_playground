@@ -4,7 +4,7 @@
 #' @param x A vector. Numeric or logical depending on function.
 #' @keywords internal
 # Reduce from the right.
-foldr <- function(f, id) {
+foldl <- function(f, id) {
   force(f)
   force(id)
 
@@ -19,7 +19,7 @@ foldr <- function(f, id) {
 
 #' @keywords internal
 # Reduce from the left.
-foldl <- function(f, id) {
+foldr <- function(f, id) {
   force(f)
   force(id)
 
