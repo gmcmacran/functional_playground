@@ -23,6 +23,7 @@ programming approach.
     -   recursive_any
 -   Function operator
     -   negate
+    -   filter
 -   Map and function operator
     -   cumulative_add
     -   cumulative_multiply
@@ -33,6 +34,8 @@ programming approach.
 -   Mutual recursion
     -   is_even
     -   is_odd
+-   Recursion
+    -   recursive_reverse
 
 ## Installation
 
