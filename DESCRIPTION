@@ -6,8 +6,7 @@ Authors@R:
            family = "McMahan",
            role = c("aut", "cre"),
            email = "gmcmacran@gmail.com")
-Description: Includes reduce, map, negate, function operations, mutual 
-    recursion.
+Description: Odds and ends of functional programming ideas.
 License: GPL-3
 Encoding: UTF-8
 Imports:
