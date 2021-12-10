@@ -36,6 +36,7 @@ programming approach.
     -   is_odd
 -   Recursion
     -   recursive_reverse
+    -   ackermann
 
 ## Installation
 
