@@ -16,3 +16,8 @@ test_that("Test ackermann", {
   expect_true(ackermann(2, 1) == 5)
   expect_true(ackermann(2, 2) == 7)
 })
+
+test_that("Test ackermann", {
+  expect_true(recursive_length(1) == 1)
+  expect_true(recursive_length(1:10) == 10)
+})

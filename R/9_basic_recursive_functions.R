@@ -46,3 +46,24 @@ ackermann <- function(m, n) {
     return(ackermann(m - 1, ackermann(m, n - 1)))
   }
 }
+
+#' Standard functions implemented by recursion
+#'
+#' @param x A vector that is not empty.
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' recursive_length(1:10)
+#' recursive_length(1)
+#' @export
+recursive_length <- function(x) {
+  if (is.na(x[-1][1])) {
+    return(1)
+  } else {
+    return(1 + recursive_length(x[-1]))
+  }
+}
