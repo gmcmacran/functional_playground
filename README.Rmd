@@ -44,6 +44,7 @@ This package implements standard algorithms using a functional programming appro
   + is_odd
 * Recursion
   + recursive_reverse
+  + ackermann
 
 
 ## Installation
