@@ -27,6 +27,13 @@ always_false <- function(...) {
 }
 test_that("Test recursive_filter", {
   expect_true(all(recursive_filter(always_true, 1:10) == 1:10))
-  expect_true(all(recursive_filter(always_false, 1:10) == vector(mode = "numeric")))
+})
+
+test_that("Test first", {
+  expect_true(first(always_true, 1:10) == 1)
+})
+
+test_that("Test last", {
+  expect_true(last(always_true, 1:10) == 10)
 })
 rm(always_true, always_false)

@@ -24,6 +24,8 @@ programming approach.
 -   Function operator
     -   negate
     -   filter
+    -   first
+    -   last
 -   Map and function operator
     -   cumulative_add
     -   cumulative_multiply

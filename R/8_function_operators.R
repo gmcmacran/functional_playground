@@ -30,12 +30,14 @@ negate <- function(f) {
 #' @examples
 #' library(functionalPlayground)
 #'
-#' always_true <- function(...) {
-#'   return(TRUE)
-#' }
-#' always_false <- negate(always_true)
-#' recursive_filter(always_true, 1:10)
-#' recursive_filter(always_false, 1:10)
+#' recursive_filter(is_even, 1:10)
+#' recursive_filter(is_odd, 1:10)
+#'
+#' first(is_even, 1:10)
+#' first(is_odd, 1:10)
+#'
+#' last(is_even, 1:10)
+#' last(is_odd, 1:10)
 #' @export
 recursive_filter <- function(f, x) {
   if (length(x) == 0) {
@@ -45,4 +47,22 @@ recursive_filter <- function(f, x) {
   } else {
     return(recursive_filter(f, x[-1]))
   }
+}
+
+#' @rdname recursive_filter
+#' @export
+first <- function(f, x) {
+  x <- recursive_filter(f, x)
+  if (length(x) >= 1) {
+    x <- x[1]
+  }
+  return(x)
+}
+
+#' @rdname recursive_filter
+#' @export
+last <- function(f, x) {
+  x <- recursive_reverse(x)
+  x <- first(f, x)
+  return(x)
 }
