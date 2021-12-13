@@ -17,7 +17,13 @@ test_that("Test ackermann", {
   expect_true(ackermann(2, 2) == 7)
 })
 
-test_that("Test ackermann", {
+test_that("Test length", {
   expect_true(recursive_length(1) == 1)
   expect_true(recursive_length(1:10) == 10)
+})
+
+test_that("Test sort", {
+  expect_true(recursive_sort(1) == 1)
+  expect_true(all(recursive_sort(10:1) == 1:10))
+  expect_true(all(recursive_sort(1:10, TRUE) == 10:1))
 })

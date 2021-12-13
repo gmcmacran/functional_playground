@@ -38,6 +38,7 @@ programming approach.
     -   recursive_reverse
     -   ackermann
     -   recursive_length
+    -   recursive_sort
 
 ## Installation
 
