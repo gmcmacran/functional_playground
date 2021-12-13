@@ -2,9 +2,15 @@
 % Please edit documentation in R/8_function_operators.R
 \name{recursive_filter}
 \alias{recursive_filter}
+\alias{first}
+\alias{last}
 \title{Standard function operator.}
 \usage{
 recursive_filter(f, x)
+
+first(f, x)
+
+last(f, x)
 }
 \arguments{
 \item{f}{A function that returns TRUE or FALSE.}
@@ -20,10 +26,12 @@ Filter any function.
 \examples{
 library(functionalPlayground)
 
-always_true <- function(...) {
-  return(TRUE)
-}
-always_false <- negate(always_true)
-recursive_filter(always_true, 1:10)
-recursive_filter(always_false, 1:10)
+recursive_filter(is_even, 1:10)
+recursive_filter(is_odd, 1:10)
+
+first(is_even, 1:10)
+first(is_odd, 1:10)
+
+last(is_even, 1:10)
+last(is_odd, 1:10)
 }
