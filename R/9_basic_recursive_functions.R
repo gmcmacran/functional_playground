@@ -67,3 +67,46 @@ recursive_length <- function(x) {
     return(1 + recursive_length(x[-1]))
   }
 }
+
+#' Standard functions implemented by recursion
+#'
+#' @param x A vector that is not empty.
+#' @param decreasing Logical. Should the vector be sorted in descending order?
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' recursive_sort(1:10)
+#' recursive_sort(10:1, TRUE)
+#' @export
+recursive_sort <- function(x, decreasing = FALSE) {
+  merge <- function(a, b) {
+    if (length(a) == 0) {
+      return(b)
+    } else if (length(b) == 0) {
+      return(a)
+    } else if (a[1] < b[1]) {
+      return(c(a[1], merge(a[-1], b)))
+    } else {
+      return(c(b[1], merge(a, b[-1])))
+    }
+  }
+
+  mergesort <- function(x) {
+    if (length(x) < 2) {
+      return(x)
+    } else {
+      h <- floor(length(x) / 2)
+      return(merge(mergesort(x[1:h]), mergesort(x[(h + 1):length(x)])))
+    }
+  }
+
+  x <- mergesort(x)
+  if (decreasing) {
+    x <- recursive_reverse(x)
+  }
+  return(x)
+}
