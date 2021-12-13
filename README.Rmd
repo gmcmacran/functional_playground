@@ -46,6 +46,7 @@ This package implements standard algorithms using a functional programming appro
   + recursive_reverse
   + ackermann
   + recursive_length
+  + recursive_sort
 
 
 ## Installation
