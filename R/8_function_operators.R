@@ -66,3 +66,21 @@ last <- function(f, x) {
   x <- first(f, x)
   return(x)
 }
+
+#' Standard function operator.
+#'
+#' @param f A function.
+#' @param g A function.
+#' @details
+#'
+#' Mathematical operation compose. (fog)(x) = f(g(x))
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' num_even <- compose(recursive_add, is_even)
+#' num_even(1:10)
+#' @export
+compose <- function(f, g) {
+  return(function(...) f(g(...)))
+}
