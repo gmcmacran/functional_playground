@@ -26,6 +26,7 @@ programming approach.
     -   filter
     -   first
     -   last
+    -   compose
 -   Map and function operator
     -   cumulative_add
     -   cumulative_multiply
