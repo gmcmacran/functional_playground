@@ -34,6 +34,7 @@ This package implements standard algorithms using a functional programming appro
   + filter
   + first
   + last
+  + compose
 * Map and function operator
   + cumulative_add
   + cumulative_multiply
