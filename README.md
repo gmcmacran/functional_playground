@@ -26,6 +26,7 @@ programming approach.
     -   filter
     -   first
     -   last
+    -   nth
     -   compose
 -   Map and function operator
     -   cumulative_add
@@ -45,7 +46,8 @@ programming approach.
 
 ## Installation
 
-This package is not on cran. A stable version can be installed with:
+This package will not be on cran. A stable version can be installed
+with:
 
 ``` r
 # install.packages("devtools")

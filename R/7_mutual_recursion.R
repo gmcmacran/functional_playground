@@ -4,10 +4,6 @@ is_even_base <- function(x) {
     stop()
   }
 
-  if (!is.integer(x)) {
-    stop()
-  }
-
   if (x == 0) {
     return(TRUE)
   } else {
@@ -18,10 +14,6 @@ is_even_base <- function(x) {
 #' @keywords internal
 is_odd_base <- function(x) {
   if (length(x) != 1) {
-    stop()
-  }
-
-  if (!is.integer(x)) {
     stop()
   }
 

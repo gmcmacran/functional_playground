@@ -1,6 +1,6 @@
 Package: functionalPlayground
 Title: Standard Functional Programming Algorithms
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: 
     person(given = "Greg",
            family = "McMahan",

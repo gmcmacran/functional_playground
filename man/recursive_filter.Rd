@@ -4,6 +4,7 @@
 \alias{recursive_filter}
 \alias{first}
 \alias{last}
+\alias{nth}
 \title{Standard function operator.}
 \usage{
 recursive_filter(f, x)
@@ -11,11 +12,15 @@ recursive_filter(f, x)
 first(f, x)
 
 last(f, x)
+
+nth(f, x, n)
 }
 \arguments{
 \item{f}{A function that returns TRUE or FALSE.}
 
 \item{x}{A vector to be filtered.}
+
+\item{n}{The nth element desired. 1 means first.}
 }
 \description{
 Standard function operator.
@@ -34,4 +39,8 @@ first(is_odd, 1:10)
 
 last(is_even, 1:10)
 last(is_odd, 1:10)
+
+nth(is_even, 1:10, 1) # same as first(is_even, 1:10)
+nth(is_even, 1:10, 2) # second even element
+nth(is_odd, 1:10, 3) # third odd element
 }
