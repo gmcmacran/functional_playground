@@ -46,7 +46,8 @@ programming approach.
 
 ## Installation
 
-This package will not on cran. A stable version can be installed with:
+This package will not be on cran. A stable version can be installed
+with:
 
 ``` r
 # install.packages("devtools")
