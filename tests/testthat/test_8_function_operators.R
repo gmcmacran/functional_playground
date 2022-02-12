@@ -33,6 +33,12 @@ test_that("Test last", {
   expect_true(last(is_even, 1:10) == 10)
   expect_true(last(is_odd, 1:10) == 9)
 })
+
+test_that("Test nth", {
+  expect_true(nth(is_even, 1:10, 1) == 2)
+  expect_true(nth(is_even, 1:10, 2) == 4)
+  expect_true(nth(is_odd, 1:10, 5) == 9)
+})
 rm(always_true)
 
 test_that("Test compose", {

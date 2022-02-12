@@ -23,6 +23,7 @@ negate <- function(f) {
 #'
 #' @param f A function that returns TRUE or FALSE.
 #' @param x A vector to be filtered.
+#' @param n The nth element desired. 1 means first.
 #' @details
 #'
 #' Filter any function.
@@ -38,6 +39,10 @@ negate <- function(f) {
 #'
 #' last(is_even, 1:10)
 #' last(is_odd, 1:10)
+#'
+#' nth(is_even, 1:10, 1) # same as first(is_even, 1:10)
+#' nth(is_even, 1:10, 2) # second even element
+#' nth(is_odd, 1:10, 3) # third odd element
 #' @export
 recursive_filter <- function(f, x) {
   if (length(x) == 0) {
@@ -65,6 +70,22 @@ last <- function(f, x) {
   x <- recursive_reverse(x)
   x <- first(f, x)
   return(x)
+}
+
+#' @rdname recursive_filter
+#' @export
+nth <- function(f, x, n) {
+  x <- recursive_filter(f, x)
+  if (n == 1 & length(x) > 0) {
+    return(x[1])
+  }
+  else if (n == 1 & length(x) == 0) {
+    return(x)
+  }
+  else {
+    x <- x[-1]
+    return(nth(f, x, n - 1))
+  }
 }
 
 #' Standard function operator.
