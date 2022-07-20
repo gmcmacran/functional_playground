@@ -19,6 +19,13 @@ negate <- function(f) {
   return(function(...) !f(...))
 }
 
+#' @rdname recursive_all
+#' @export
+recursive_none <- function(x) {
+  helper <- negate(recursive_any)
+  return(helper(x))
+}
+
 #' Standard function operator.
 #'
 #' @param f A function that returns TRUE or FALSE.

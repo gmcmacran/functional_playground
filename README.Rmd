@@ -13,14 +13,24 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Overview
+## Overview
 
 <!-- badges: start -->
 [![R build status](https://github.com/gmcmacran/functional_playground/workflows/R-CMD-check/badge.svg)](https://github.com/gmcmacran/functional_playground/actions)
 [![Codecov test coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/main/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=master)
 <!-- badges: end -->
 
-This package implements standard algorithms using a functional programming approach.
+The package explores functional programming (map, reduce, operators, recursion, etc.). Motivating questions include
+
+* Is factoring out looping w/ map truly better than having loops within each function?
+* If I come back to the code after 3 months, can I understand it? 
+* How hidden are the dependencies? 
+* Do higher order functions feel like a purpose built tools or forcing a round peg in a square hole?
+* Is there some aspect of R's language definition that prevent functional implementations?
+
+This package implements standard algorithms using a functional programming approach to answer these questions.
+
+## Algorithms
 
 * Reduce/fold
   + recursive_add
@@ -31,6 +41,7 @@ This package implements standard algorithms using a functional programming appro
   + recursive_any
 * Function operator
   + negate
+  + recursive_none
   + filter
   + first
   + last

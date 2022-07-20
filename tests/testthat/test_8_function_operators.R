@@ -16,6 +16,21 @@ test_that("Test negate using always_true", {
   expect_true(negate(always_false)(FALSE))
 })
 
+test_that("Test none over empty vector and single values", {
+  expect_true(recursive_none(c()) == !any(c()))
+  expect_true(recursive_none(TRUE) == !any(TRUE))
+  expect_true(recursive_none(FALSE) == !any(FALSE))
+})
+
+set.seed(1)
+rand <- runif(10) > .5
+test_that("Test all over vectors.", {
+  expect_true(recursive_none(rep(TRUE, 10)) == !any(rep(TRUE, 10)))
+  expect_true(recursive_none(rep(FALSE, 10)) == !any(rep(FALSE, 10)))
+  expect_true(recursive_none(rand) == !any(rand))
+})
+rm(rand)
+
 test_that("Test recursive_filter", {
   expect_true(all(recursive_filter(always_true, 1:10) == 1:10))
   expect_true(all(recursive_filter(is_even, 1:10) == seq(2, 10, 2)))

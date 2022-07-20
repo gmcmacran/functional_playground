@@ -11,6 +11,7 @@
 #' x <- c(TRUE, TRUE, FALSE, FALSE)
 #' recursive_all(x)
 #' recursive_any(x)
+#' recursive_none(x)
 #' @export
 recursive_all <- foldr(and, TRUE)
 
