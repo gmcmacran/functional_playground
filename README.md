@@ -35,6 +35,7 @@ programming approach to answer these questions.
     -   recursive_min
     -   recursive_all
     -   recursive_any
+    -   recursive_is_in
 -   Function operator
     -   negate
     -   recursive_none

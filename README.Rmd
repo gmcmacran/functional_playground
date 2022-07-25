@@ -39,6 +39,7 @@ This package implements standard algorithms using a functional programming appro
   + recursive_min
   + recursive_all
   + recursive_any
+  + recursive_is_in
 * Function operator
   + negate
   + recursive_none
