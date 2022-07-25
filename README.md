@@ -28,14 +28,13 @@ programming approach to answer these questions.
 
 ## Algorithms
 
--   Reduce/fold
+-   Fold
     -   recursive_add
     -   recursive_multiply
     -   recursive_max
     -   recursive_min
     -   recursive_all
     -   recursive_any
-    -   recursive_is_in
 -   Function operator
     -   negate
     -   recursive_none
@@ -51,6 +50,8 @@ programming approach to answer these questions.
     -   cumulative_min
     -   cumulative_all
     -   cumulative_any
+-   Map and fold
+    -   recursive_is_in
 -   Mutual recursion
     -   is_even
     -   is_odd
