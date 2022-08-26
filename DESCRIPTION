@@ -10,10 +10,10 @@ Description: Odds and ends of functional programming ideas.
 License: GPL-3
 Encoding: UTF-8
 Imports:
-    lest (>= 1.1.0)
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Suggests: 
     testthat,
-    covr
+    covr,
+    lest (>= 1.1.0)

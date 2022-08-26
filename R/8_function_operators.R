@@ -85,11 +85,9 @@ nth <- function(f, x, n) {
   x <- recursive_filter(f, x)
   if (n == 1 & length(x) > 0) {
     return(x[1])
-  }
-  else if (n == 1 & length(x) == 0) {
+  } else if (n == 1 & length(x) == 0) {
     return(x)
-  }
-  else {
+  } else {
     x <- x[-1]
     return(nth(f, x, n - 1))
   }
