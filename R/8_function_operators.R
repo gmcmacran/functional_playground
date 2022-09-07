@@ -26,6 +26,10 @@ recursive_none <- function(x) {
   return(helper(x))
 }
 
+#' @rdname cumulative_all
+#' @export
+cumulative_none <- cumulative_f(recursive_none)
+
 #' Standard function operator.
 #'
 #' @param f A function that returns TRUE or FALSE.

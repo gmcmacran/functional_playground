@@ -22,6 +22,14 @@ test_that("Test none over empty vector and single values", {
   expect_true(recursive_none(FALSE) == !any(FALSE))
 })
 
+x <- c(rep(FALSE, 5), rep(TRUE, 5))
+test_that("Test all over vectors.", {
+  expect_true(all(cumulative_none(rep(TRUE, 10)) == rep(FALSE, 10)))
+  expect_true(all(cumulative_none(rep(FALSE, 10)) == rep(TRUE, 10)))
+  expect_true(all(cumulative_none(x) == !x))
+  expect_true(all(cumulative_none(!x) == rep(FALSE, 10)))
+})
+
 set.seed(1)
 rand <- runif(10) > .5
 test_that("Test all over vectors.", {

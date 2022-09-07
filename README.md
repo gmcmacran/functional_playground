@@ -50,6 +50,7 @@ programming approach to answer these questions.
     -   cumulative_min
     -   cumulative_all
     -   cumulative_any
+    -   cumulative_none
 -   Map and fold
     -   recursive_is_in
 -   Mutual recursion
