@@ -11,6 +11,7 @@
 #' x <- c(TRUE, TRUE, FALSE, FALSE)
 #' cumulative_all(x)
 #' cumulative_any(x)
+#' cumulative_none(x)
 #' @export
 cumulative_all <- cumulative_f(recursive_all)
 
