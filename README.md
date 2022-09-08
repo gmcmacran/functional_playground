@@ -56,11 +56,16 @@ programming approach to answer these questions.
 -   Mutual recursion
     -   is_even
     -   is_odd
+    -   hofstadter_female
+    -   hofstadter_male
 -   Recursion
     -   recursive_reverse
     -   ackermann
     -   recursive_length
     -   recursive_sort
+    -   hofstadter_g
+    -   hofstadter_h
+    -   hofstadter_q
 
 ## Installation
 

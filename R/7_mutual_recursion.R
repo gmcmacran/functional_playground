@@ -47,3 +47,35 @@ is_even <- function(x) {
 is_odd <- function(x) {
   return(map(x, is_odd_base))
 }
+
+#' Mutual recursion
+#'
+#' @param n A numeric vector containing one integer.
+#' @details
+#'
+#' Functions leveraging mutual recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' n <- 3
+#' hofstadter_female(n)
+#' hofstadter_male(n)
+#' @export
+hofstadter_female <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n - hofstadter_male(hofstadter_female(n - 1)))
+  }
+}
+
+#' @rdname hofstadter_female
+#' @export
+hofstadter_male <- function(n) {
+  if (n == 0) {
+    return(0)
+  } else {
+    return(n - hofstadter_female(hofstadter_male(n - 1)))
+  }
+}

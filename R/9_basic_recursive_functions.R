@@ -110,3 +110,74 @@ recursive_sort <- function(x, decreasing = FALSE) {
   }
   return(x)
 }
+
+#' Standard functions implemented by recursion
+#'
+#' @param n A numeric vector containing one integer.
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' hofstadter_g(0)
+#' hofstadter_g(1)
+#' hofstadter_g(2)
+#' hofstadter_g(3)
+#' @export
+hofstadter_g <- function(n) {
+  if (n == 0) {
+    return(0)
+  } else {
+    out <- n - hofstadter_g(hofstadter_g(n - 1))
+    return(out)
+  }
+}
+
+#' Standard functions implemented by recursion
+#'
+#' @param n A numeric vector containing one integer.
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' hofstadter_h(0)
+#' hofstadter_h(1)
+#' hofstadter_h(2)
+#' hofstadter_h(3)
+#' @export
+hofstadter_h <- function(n) {
+  if (n == 0) {
+    return(0)
+  } else {
+    out <- n - hofstadter_h(hofstadter_h(hofstadter_h(n - 1)))
+    return(out)
+  }
+}
+
+#' Standard functions implemented by recursion
+#'
+#' @param n A numeric vector containing one integer.
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' hofstadter_q(1)
+#' hofstadter_q(2)
+#' hofstadter_q(3)
+#' @export
+hofstadter_q <- function(n) {
+  if (n == 1 | n == 2) {
+    return(1)
+  } else {
+    out <- hofstadter_q(n - hofstadter_q(n - 1)) + hofstadter_q(n - hofstadter_q(n - 2))
+    return(out)
+  }
+}
