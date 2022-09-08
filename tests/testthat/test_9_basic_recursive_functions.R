@@ -27,3 +27,33 @@ test_that("Test sort", {
   expect_true(all(recursive_sort(10:1) == 1:10))
   expect_true(all(recursive_sort(1:10, TRUE) == 10:1))
 })
+
+wiki <- c(0, 1, 1, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8, 8, 9, 9, 10, 11, 11, 12, 12)
+temp <- vector(mode = "numeric", length = length(wiki))
+for (i in seq_along(1:(length(wiki)))) {
+  temp[i] <- hofstadter_g(i - 1)
+}
+test_that("Test hofstadter_g", {
+  expect_true(all(wiki == temp))
+})
+rm(temp, wiki)
+
+wiki <- c(0, 1, 1, 2, 3, 4, 4, 5, 5, 6, 7, 7, 8, 9, 10, 10, 11, 12, 13, 13, 14)
+temp <- vector(mode = "numeric", length = length(wiki))
+for (i in seq_along(1:(length(wiki)))) {
+  temp[i] <- hofstadter_h(i - 1)
+}
+test_that("Test hofstadter_h", {
+  expect_true(all(wiki == temp))
+})
+rm(temp, wiki)
+
+wiki <- c(1, 1, 2, 3, 3, 4, 5, 5, 6, 6, 6, 8, 8, 8, 10, 9, 10, 11, 11, 12)
+temp <- vector(mode = "numeric", length = length(wiki))
+for (i in seq_along(1:(length(wiki)))) {
+  temp[i] <- hofstadter_q(i)
+}
+test_that("Test hofstadter_q", {
+  expect_true(all(wiki == temp))
+})
+rm(temp, wiki)
