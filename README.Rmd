@@ -70,6 +70,8 @@ This package implements standard algorithms using a functional programming appro
   + hofstadter_g
   + hofstadter_h
   + hofstadter_q
+  + recursive_gcd
+  + recursive_lcm
 
 
 ## Installation
