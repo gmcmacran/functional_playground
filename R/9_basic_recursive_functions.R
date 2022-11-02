@@ -181,3 +181,51 @@ hofstadter_q <- function(n) {
     return(out)
   }
 }
+
+#' Standard functions implemented by recursion
+#'
+#' @param a A positive integer vector of length 1.
+#' @param b A positive integer vector of length 1.
+#' @details
+#'
+#' Functions leveraging recursion.
+#'
+#' @examples
+#' library(functionalPlayground)
+#'
+#' recursive_gcd(4L, 6L)
+#' recursive_gcd(10L, 20L)
+#' recursive_gcd(1L, 100L)
+#'
+#' recursive_lcm(4L, 6L)
+#' recursive_lcm(10L, 20L)
+#' recursive_lcm(1L, 100L)
+#' @export
+recursive_gcd <- function(a, b) {
+  # euclidean algorithm
+
+  # switch and b
+  # a smaller
+  if (a > b) {
+    temp <- b
+    b <- a
+    a <- temp
+    rm(temp)
+  }
+
+  if (a == 0) {
+    return(b)
+  } else {
+    return(recursive_gcd(a, b %% a))
+  }
+}
+
+
+#' @rdname recursive_gcd
+#' @export
+recursive_lcm <- function(a, b) {
+  num <- a * b
+  denom <- recursive_gcd(a, b)
+  out <- num / denom
+  return(out)
+}
