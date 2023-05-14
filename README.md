@@ -8,12 +8,15 @@
 [![R build
 status](https://github.com/gmcmacran/functional_playground/workflows/R-CMD-check/badge.svg)](https://github.com/gmcmacran/functional_playground/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/main/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=master)
+coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/main/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=main)
 <!-- badges: end -->
 
-The package explores functional programming (map, reduce, operators,
-recursion, etc.). Motivating questions include
+The package explores functional programming. Motivating questions
+include:
 
+- Can I implement standard higher order functions like map, fold, and
+  filter from scratch?
+- Can I combine higher order functions to make something meaningful?
 - Is factoring out looping w/ map truly better than having loops within
   each function?
 - If I come back to the code after 3 months, can I understand it?
