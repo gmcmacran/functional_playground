@@ -174,10 +174,11 @@ hofstadter_h <- function(n) {
 #' hofstadter_q(3)
 #' @export
 hofstadter_q <- function(n) {
-  if (n == 1 | n == 2) {
+  if (n == 1 || n == 2) {
     return(1)
   } else {
-    out <- hofstadter_q(n - hofstadter_q(n - 1)) + hofstadter_q(n - hofstadter_q(n - 2))
+    out <- hofstadter_q(n - hofstadter_q(n - 1)) +
+      hofstadter_q(n - hofstadter_q(n - 2))
     return(out)
   }
 }

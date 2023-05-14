@@ -16,4 +16,5 @@ RoxygenNote: 7.2.1
 Suggests: 
     testthat,
     covr,
-    lest (>= 1.1.0)
+    lest (>= 1.1.0),
+    lintr

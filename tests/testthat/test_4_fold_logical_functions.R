@@ -29,5 +29,8 @@ test_that("Test any over vectors.", {
   expect_true(all(recursive_is_in(seq(1, 5, 1), seq(1, 5, 1)) == rep(TRUE, 5)))
   expect_true(all(recursive_is_in(seq(1, 5, 1), c()) == rep(FALSE, 5)))
   expect_true(all(recursive_is_in(seq(1, 5, 1), seq(1, 10, 1)) == rep(TRUE, 5)))
-  expect_true(all(recursive_is_in(seq(1, 10, 1), seq(1, 5, 1)) == c(rep(TRUE, 5), rep(FALSE, 5))))
+  expect_true(all(
+    recursive_is_in(seq(1, 10, 1), seq(1, 5, 1)) ==
+      c(rep(TRUE, 5), rep(FALSE, 5))
+  ))
 })
