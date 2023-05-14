@@ -1,6 +1,6 @@
 Package: functionalPlayground
 Title: Standard Functional Programming Algorithms
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     person(given = "Greg",
            family = "McMahan",
@@ -16,4 +16,5 @@ RoxygenNote: 7.2.1
 Suggests: 
     testthat,
     covr,
-    lest (>= 1.1.0)
+    lest (>= 1.1.0),
+    lintr

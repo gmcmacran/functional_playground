@@ -87,9 +87,9 @@ last <- function(f, x) {
 #' @export
 nth <- function(f, x, n) {
   x <- recursive_filter(f, x)
-  if (n == 1 & length(x) > 0) {
+  if (n == 1 && length(x) > 0) {
     return(x[1])
-  } else if (n == 1 & length(x) == 0) {
+  } else if (n == 1 && length(x) == 0) {
     return(x)
   } else {
     x <- x[-1]

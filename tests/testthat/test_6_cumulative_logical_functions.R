@@ -8,7 +8,9 @@ set.seed(1)
 rand <- runif(10) > .5
 test_that("Test all over vectors.", {
   expect_true(all(cumulative_all(rep(TRUE, 10)) == lest::cumall(rep(TRUE, 10))))
-  expect_true(all(cumulative_all(rep(FALSE, 10)) == lest::cumall(rep(FALSE, 10))))
+  expect_true(all(
+    cumulative_all(rep(FALSE, 10)) == lest::cumall(rep(FALSE, 10))
+  ))
   expect_true(all(cumulative_all(rand) == lest::cumall(rand)))
 })
 
@@ -20,7 +22,9 @@ test_that("Test any over empty vector and single values", {
 
 test_that("Test any over vectors.", {
   expect_true(all(cumulative_any(rep(TRUE, 10)) == lest::cumany(rep(TRUE, 10))))
-  expect_true(all(cumulative_any(rep(FALSE, 10)) == lest::cumany(rep(FALSE, 10))))
+  expect_true(all(
+    cumulative_any(rep(FALSE, 10)) == lest::cumany(rep(FALSE, 10))
+  ))
   expect_true(all(cumulative_any(rand) == lest::cumany(rand)))
 })
 rm(rand)

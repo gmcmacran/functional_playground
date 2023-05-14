@@ -13,7 +13,7 @@ test_that("Test is.odd", {
 
 wiki <- c(1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6, 7, 8, 8, 9, 9, 10, 11, 11, 12, 13)
 temp <- vector(mode = "numeric", length = length(wiki))
-for (i in seq_along(1:(length(wiki)))) {
+for (i in seq(1, length(wiki))) {
   temp[i] <- hofstadter_female(i - 1)
 }
 test_that("Test hofstadter_female", {
@@ -23,7 +23,7 @@ rm(temp, wiki)
 
 wiki <- c(0, 0, 1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10, 11, 11, 12, 12)
 temp <- vector(mode = "numeric", length = length(wiki))
-for (i in seq_along(1:(length(wiki)))) {
+for (i in seq(1, length(wiki))) {
   temp[i] <- hofstadter_male(i - 1)
 }
 test_that("Test hofstadter_male", {

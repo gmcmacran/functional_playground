@@ -53,8 +53,9 @@ cumulative_f <- function(f) {
       helper <- function(endpoint) {
         return(f(x[1:endpoint]))
       }
-      inner_out <- map(1:length(x), helper)
+      inner_out <- map(seq(1, length(x), 1), helper)
     }
     return(inner_out)
   }
+  return(out)
 }
