@@ -59,35 +59,3 @@ cumulative_f <- function(f) {
   }
   return(out)
 }
-
-#' @keywords internal
-memoize <- function(f) {
-  force(f)
-  memo <- list()
-
-  g <- function(n) {
-    helper <- function(n) {
-      if (as.character(n) %in% names(memo)) {
-        return(memo[[as.character(n)]])
-      } else {
-        memo[as.character(n)] <<- f(n)
-        return(memo[[as.character(n)]])
-      }
-    }
-    return(helper(n))
-  }
-  return(g)
-}
-
-#' @keywords internal
-time_f <- function(f) {
-  force(f)
-
-  g <- function(x) {
-    start_time <- Sys.time()
-    f(x)
-    end_time <- Sys.time()
-    return(end_time - start_time)
-  }
-  return(g)
-}
