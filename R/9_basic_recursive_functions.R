@@ -111,6 +111,16 @@ recursive_sort <- function(x, decreasing = FALSE) {
   return(x)
 }
 
+#' @keywords internal
+internal_hofstadter_g <- function(n) {
+  if (n == 0) {
+    return(0)
+  } else {
+    out <- n - hofstadter_g(hofstadter_g(n - 1))
+    return(out)
+  }
+}
+
 #' Standard functions implemented by recursion
 #'
 #' @param n A numeric vector containing one integer.
@@ -126,11 +136,14 @@ recursive_sort <- function(x, decreasing = FALSE) {
 #' hofstadter_g(2)
 #' hofstadter_g(3)
 #' @export
-hofstadter_g <- function(n) {
+hofstadter_g <- memoize(internal_hofstadter_g)
+
+#' @keywords internal
+internal_hofstadter_h <- function(n) {
   if (n == 0) {
     return(0)
   } else {
-    out <- n - hofstadter_g(hofstadter_g(n - 1))
+    out <- n - hofstadter_h(hofstadter_h(hofstadter_h(n - 1)))
     return(out)
   }
 }
@@ -150,11 +163,15 @@ hofstadter_g <- function(n) {
 #' hofstadter_h(2)
 #' hofstadter_h(3)
 #' @export
-hofstadter_h <- function(n) {
-  if (n == 0) {
-    return(0)
+hofstadter_h <- memoize(internal_hofstadter_h)
+
+#' @keywords internal
+internal_hofstadter_q <- function(n) {
+  if (n == 1 || n == 2) {
+    return(1)
   } else {
-    out <- n - hofstadter_h(hofstadter_h(hofstadter_h(n - 1)))
+    out <- hofstadter_q(n - hofstadter_q(n - 1)) +
+      hofstadter_q(n - hofstadter_q(n - 2))
     return(out)
   }
 }
@@ -173,15 +190,7 @@ hofstadter_h <- function(n) {
 #' hofstadter_q(2)
 #' hofstadter_q(3)
 #' @export
-hofstadter_q <- function(n) {
-  if (n == 1 || n == 2) {
-    return(1)
-  } else {
-    out <- hofstadter_q(n - hofstadter_q(n - 1)) +
-      hofstadter_q(n - hofstadter_q(n - 2))
-    return(out)
-  }
-}
+hofstadter_q <- memoize(internal_hofstadter_q)
 
 #' Standard functions implemented by recursion
 #'
