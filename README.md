@@ -20,25 +20,19 @@ include:
 - Is factoring out looping w/ map truly better than having loops within
   each function?
 - If I come back to the code after 3 months, can I understand it?
-- How hidden are the dependencies?
-- Do higher order functions feel like a purpose built tools or forcing a
-  round peg in a square hole?
 - Is there some aspect of R’s language definition that prevent
   functional implementations?
 
 This package implements standard algorithms using a functional
 programming approach to answer these questions.
 
-## Algorithms
+## Higher Order Functions
 
-- Fold
-  - recursive_add
-  - recursive_multiply
-  - recursive_max
-  - recursive_min
-  - recursive_all
-  - recursive_any
-- Function operator
+- Functionals
+  - fold
+  - map
+- Function Operators
+  - cumulative_f
   - negate
   - recursive_none
   - filter
@@ -46,7 +40,24 @@ programming approach to answer these questions.
   - last
   - nth
   - compose
-- Map and function operator
+  - memoize
+  - time_f
+  - negate
+
+## Standard Algorithms
+
+- Using Fold
+  - recursive_add
+  - recursive_multiply
+  - recursive_max
+  - recursive_min
+  - recursive_all
+  - recursive_any
+- Using Function Operator
+  - hofstadter_g
+  - hofstadter_h
+  - hofstadter_q
+- Using Map and Function Operator
   - cumulative_add
   - cumulative_multiply
   - cumulative_max
@@ -54,21 +65,18 @@ programming approach to answer these questions.
   - cumulative_all
   - cumulative_any
   - cumulative_none
-- Map and fold
+- Using Map and Fold
   - recursive_is_in
-- Mutual recursion
+- Using Mutual Recursion
   - is_even
   - is_odd
   - hofstadter_female
   - hofstadter_male
-- Recursion
+- Using Recursion
   - recursive_reverse
   - ackermann
   - recursive_length
   - recursive_sort
-  - hofstadter_g
-  - hofstadter_h
-  - hofstadter_q
   - recursive_gcd
   - recursive_lcm
 
@@ -79,5 +87,5 @@ with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("gmcmacran/functional_playground")
+devtools::install_github("gmcmacran/functionalPlayground")
 ```
