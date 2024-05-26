@@ -116,7 +116,7 @@ internal_hofstadter_g <- function(n) {
   if (n == 0) {
     return(0)
   } else {
-    out <- n - hofstadter_g(hofstadter_g(n - 1))
+    out <- n - internal_hofstadter_g(internal_hofstadter_g(n - 1))
     return(out)
   }
 }
@@ -143,7 +143,9 @@ internal_hofstadter_h <- function(n) {
   if (n == 0) {
     return(0)
   } else {
-    out <- n - hofstadter_h(hofstadter_h(hofstadter_h(n - 1)))
+    out <- n - internal_hofstadter_h(
+      internal_hofstadter_h(internal_hofstadter_h(n - 1))
+    )
     return(out)
   }
 }
@@ -170,8 +172,8 @@ internal_hofstadter_q <- function(n) {
   if (n == 1 || n == 2) {
     return(1)
   } else {
-    out <- hofstadter_q(n - hofstadter_q(n - 1)) +
-      hofstadter_q(n - hofstadter_q(n - 2))
+    out <- internal_hofstadter_q(n - internal_hofstadter_q(n - 1)) +
+      internal_hofstadter_q(n - internal_hofstadter_q(n - 2))
     return(out)
   }
 }
