@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 ## Overview
 
 <!-- badges: start -->
-[![R build status](https://github.com/gmcmacran/functional_playground/workflows/R-CMD-check/badge.svg)](https://github.com/gmcmacran/functional_playground/actions)
+[![R-CMD-check](https://github.com/gmcmacran/functional_playground/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gmcmacran/functional_playground/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/gmcmacran/functional_playground/branch/main/graph/badge.svg)](https://codecov.io/gh/gmcmacran/functional_playground?branch=main)
 <!-- badges: end -->
 
