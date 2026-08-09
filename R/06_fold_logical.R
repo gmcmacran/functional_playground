@@ -40,3 +40,10 @@ recursive_is_in <- function(x, y) {
   out <- map(x, single_is_in)
   return(out)
 }
+
+#' @rdname recursive_all
+#' @export
+recursive_none <- function(x) {
+  helper <- negate(recursive_any)
+  return(helper(x))
+}

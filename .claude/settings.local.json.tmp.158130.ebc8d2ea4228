@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rscript -e 'cat\\(R.version.string,\"\\\\n\"\\); cat\\(paste\\(rownames\\(installed.packages\\(\\)\\)[rownames\\(installed.packages\\(\\)\\) %in% c\\(\"roxygen2\",\"devtools\",\"testthat\",\"lest\",\"lintr\",\"covr\"\\)], collapse=\" \"\\), \"\\\\n\"\\)')",
+      "Bash(Rscript -e 'devtools::test\\(\\)')",
+      "Bash(Rscript -e 'devtools::document\\(\\)')",
+      "Bash(Rscript -e 'devtools::check\\(args = c\\(\"--no-manual\", \"--no-tests\"\\), error_on = \"never\"\\)')",
+      "Bash(Rscript -e 'print\\(lintr::lint_package\\(\\)\\)')",
+      "Bash(Rscript -e 'l <- lintr::lint_package\\(\\); cat\\(length\\(l\\), \"lints\\\\n\"\\); print\\(table\\(vapply\\(l, function\\(x\\) x$linter, \"\"\\)\\)\\)')",
+      "Bash(Rscript -e 'l <- lintr::lint_package\\(\\); print\\(l[vapply\\(l, function\\(x\\) x$linter, \"\"\\)==\"object_usage_linter\"]\\)')",
+      "Bash(git stash *)",
+      "Bash(Rscript -e 'l <- lintr::lint_package\\(\\); print\\(table\\(vapply\\(l, function\\(x\\) x$linter, \"\"\\)\\)\\); print\\(l[vapply\\(l, function\\(x\\) x$linter, \"\"\\)==\"object_usage_linter\"]\\)')"
+    ]
+  }
+}
