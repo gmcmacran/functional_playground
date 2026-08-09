@@ -1,7 +1,8 @@
 #' @title Higher order functions
 #' @param f A function.
-#' @param id Value when x is empty
-#' @param x A vector. Numeric or logical depending on function.
+#' @param id Value when the input vector is empty
+#' @details The returned function takes a single argument `x`, a vector that is
+#'   numeric or logical depending on `f`.
 #' @keywords internal
 # Reduce from the right.
 foldl <- function(f, id) {

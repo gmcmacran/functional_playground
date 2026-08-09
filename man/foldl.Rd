@@ -9,11 +9,13 @@ foldl(f, id)
 \arguments{
 \item{f}{A function.}
 
-\item{id}{Value when x is empty}
-
-\item{x}{A vector. Numeric or logical depending on function.}
+\item{id}{Value when the input vector is empty}
 }
 \description{
 Higher order functions
+}
+\details{
+The returned function takes a single argument \code{x}, a vector that is
+numeric or logical depending on \code{f}.
 }
 \keyword{internal}
