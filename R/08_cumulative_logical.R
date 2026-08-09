@@ -18,3 +18,7 @@ cumulative_all <- cumulative_f(recursive_all)
 #' @rdname cumulative_all
 #' @export
 cumulative_any <- cumulative_f(recursive_any)
+
+#' @rdname cumulative_all
+#' @export
+cumulative_none <- cumulative_f(recursive_none)

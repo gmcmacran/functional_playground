@@ -41,21 +41,3 @@ map <- function(x, f) {
     return(c(f(x[1]), map(x[-1], f)))
   }
 }
-
-#' @keywords internal
-cumulative_f <- function(f) {
-  force(f)
-  out <- function(x) {
-    inner_out <- vector(length = length(x))
-    if (length(x) == 0) {
-      inner_out <- f(x)
-    } else {
-      helper <- function(endpoint) {
-        return(f(x[1:endpoint]))
-      }
-      inner_out <- map(seq(1, length(x), 1), helper)
-    }
-    return(inner_out)
-  }
-  return(out)
-}
